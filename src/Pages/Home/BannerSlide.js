@@ -9,7 +9,7 @@ const BannerSlide = ({ slide }) => {
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/4">
         <h1 className="lg:text-6xl md:text-4xl text-2xl font-bold text-white">
-          Make Your  <span className="text-sky-500">Dental</span>  <br />
+          Make Your  <span className="text-cyan-500">Dental</span>  <br />
           Experience a Lot <br />
           Brighter
         </h1>
@@ -23,13 +23,13 @@ const BannerSlide = ({ slide }) => {
       </div>
       <div className="absolute flex items-center justify-start transform -translate-y-1/2 w-2/5 left-24 top-3/4">
         <p className="text-2xl text-white mr-3">Book An</p>
-        <button className="btn btn-outline bg-sky-400 hover:bg-sky-600 text-black"> Apointment   ❯</button>
+        <button className="btn btn-outline bg-cyan-500 hover:bg-cyan-700 text-black"> Apointment   ❯</button>
       </div>
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href={`#slide${previous}`} className="btn btn-circle bg-sky-500">
+        <a href={`#slide${previous}`} className="btn btn-circle bg-cyan-500">
           ❮
         </a>
-        <a href={`#slide${next}`} className="btn btn-circle bg-sky-500">
+        <a href={`#slide${next}`} className="btn btn-circle bg-cyan-500">
           ❯
         </a>
       </div>
