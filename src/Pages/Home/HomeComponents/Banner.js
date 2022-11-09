@@ -1,8 +1,8 @@
-import image1 from '../../Assets/Banner/image1.jpg';
-import image2 from '../../Assets/Banner/image2.jpg';
-import image3 from '../../Assets/Banner/image3.jpg';
-import image4 from '../../Assets/Banner/image4.jpg';
-import image5 from '../../Assets/Banner/image5.jpg';
+import image1 from '../../../Assets/Banner/image1.jpg';
+import image2 from '../../../Assets/Banner/image2.jpg';
+import image3 from '../../../Assets/Banner/image3.jpg';
+import image4 from '../../../Assets/Banner/image4.jpg';
+import image5 from '../../../Assets/Banner/image5.jpg';
 
 import BannerSlide from './BannerSlide';
 

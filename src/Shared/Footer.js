@@ -11,7 +11,7 @@ const Footer = () => {
            
            {<FontAwesomeIcon icon={faTooth}></FontAwesomeIcon>}
          </div>
-                    <span className="self-center text-3xl font-semibold">Dental Solution</span>
+                    <span className="self-center text-3xl  font-thin">Dr. John's Dental Solution</span>
                 </a>
             </div>
             <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

@@ -1,5 +1,6 @@
-import image6 from "../../Assets/About/image6.png";
-import image5 from "../../Assets/About/img5.jpg";
+import image6 from "../../../Assets/About/image6.png";
+import image5 from "../../../Assets/About/img5.jpg";
+import "./Banner.css";
 const Advertise = () => {
   return (
     <div className="carousel-item relative w-full mb-16">

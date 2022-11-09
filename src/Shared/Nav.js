@@ -12,18 +12,100 @@ const Nav = () => {
             {<FontAwesomeIcon icon={faTooth}></FontAwesomeIcon>}
           </div>
           <Link
-            className="ml-3 normal-case text-3xl font-semibold"
+            className="ml-3 normal-case text-3xl  font-thin"
             to="./"
           >
-            Dental Solution
+            Dr. John's Dental Solution
           </Link>
         </div>
         <div>
         <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">First Link</a>
-          <a className="mr-5 hover:text-gray-900">Second Link</a>
-          <a className="mr-5 hover:text-gray-900">Third Link</a>
-          <a className="mr-5 hover:text-gray-900">Fourth Link</a>
+        <ul className="menu menu-horizontal p-0">
+            <li>
+              <Link
+                to="/home"
+                aria-label="Home"
+                title="Home"
+                className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                aria-label="Services"
+                title="Services"
+                className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/login"
+                aria-label="Login"
+                title="Login"
+                className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+              >
+                LogIn
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/blogs"
+                aria-label="Blogs"
+                title="Blogs"
+                className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+              >
+                Blogs
+              </Link>
+            </li>
+            {/* <li>
+              {user?.uid ? (
+                <button
+                  onClick={handleLogOut}
+                  className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+                >
+                  Log Out
+                </button>
+              ) : (
+                <>
+                  {" "}
+                  <Link
+                    to="/registration"
+                    className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+                  >
+                    Sign Up
+                  </Link>
+                  <Link
+                    to="/login"
+                    className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+                  >
+                    Log In
+                  </Link>
+                </>
+              )}
+            </li>
+            <li>
+              <p>
+                {user?.photoURL ? (
+                  <div className="tooltip" data-tip={user.displayName}>
+                    <img
+                      className="rounded-full h-8 w-8"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <FaUser
+                    title={user?.displayName ? user.displayName : "user"}
+                  ></FaUser>
+                )}
+              </p>
+            </li> */}
+          </ul>
         </nav>
         </div>
        <div> <button className="inline-flex items-center btn btn-outline bg-cyan-400 text-black py-1 px-3  rounded hover:bg-cyan-500 mt-4 md:mt-0">
