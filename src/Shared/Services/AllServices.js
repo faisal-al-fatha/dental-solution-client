@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 
-const Services = () => {
+const AllServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services/3")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -27,4 +27,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default AllServices;

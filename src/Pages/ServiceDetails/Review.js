@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Layout/Main";
 import ReviewForm from "./ReviewForm";
-import ReviewsCard from "./ReviewsCard";
 
 const Review = ({ service }) => {
   const { name, _id } = service;
@@ -15,7 +14,7 @@ const Review = ({ service }) => {
         <h3 className="text-3xl text-center my-8">
           Patients Reviews of our service on {name}
         </h3>
-        <ReviewsCard></ReviewsCard>
+        {/* <ReviewsCard></ReviewsCard> */}
         {user?.uid ? (
           <>
             <ReviewForm service={service}></ReviewForm>

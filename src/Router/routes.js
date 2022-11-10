@@ -7,7 +7,7 @@ import Login from '../Pages/Login/Login';
 import MyReviews from '../Pages/MyReviews/MyReviews';
 import ServiceDetails from '../Pages/ServiceDetails/ServiceDetails';
 import SignUp from '../Pages/SignUp/SignUp';
-import Services from '../Shared/Services/Services';
+import AllServices from '../Shared/Services/AllServices';
 
 const router  = createBrowserRouter([
     {path:'/',
@@ -36,7 +36,7 @@ const router  = createBrowserRouter([
         },
         {
             path: '/services',
-            element: <Services></Services>
+            element: <AllServices></AllServices>
         },
         {
             path: '/services/:id',

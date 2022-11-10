@@ -35,7 +35,6 @@ const Main = () => {
 
     useEffect(()=>{
        const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
-            console.log('inside', currentUser);
             setUser(currentUser);
             setLoading(false);
         });
@@ -44,7 +43,7 @@ const Main = () => {
         }
     },[])
     
-    const authInfo = { auth, courses, user, setUser, providerLogin, createUser, logIn, logOut, loading}
+    const authInfo = { auth, courses, user, setUser, providerLogin, createUser, logIn, logOut, loading, setLoading}
     return (
         <div>
             <AuthContext.Provider value = {authInfo}>

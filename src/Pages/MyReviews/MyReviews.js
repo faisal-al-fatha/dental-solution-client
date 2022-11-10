@@ -4,13 +4,18 @@ import { AuthContext } from "../../Layout/Main";
 const MyReviews = () => {
     const {user} = useContext(AuthContext);
     const [reviews, setReviews] = useState({});
-    const url = `http://localhost:5000/reviews?email=${user?.email}`;
+    const [loading, setLoading]= useState(true)
+
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
             .then(res => res.json())
-            .then(data => setReviews(data))
+            .then(data => setReviews(data));
+            setLoading(false)
     }, [user?.email])
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-emerald-400"></div>
+    }
     console.log(reviews);
     return (
         <div>
