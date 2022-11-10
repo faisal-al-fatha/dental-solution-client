@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import AddServise from '../Pages/AddAService/AddServise';
+import Blogs from '../Pages/Blogs/Blogs';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
-import Blogs from '../Pages/Home/Blogs/Blogs';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import MyReviews from '../Pages/MyReviews/MyReviews';
@@ -48,7 +48,7 @@ const router  = createBrowserRouter([
         {
             path: '/services/:id',
             element: <ServiceDetails></ServiceDetails>,
-            loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`),
+            loader: ({params})=> fetch(`https://dental-solution-server-beta.vercel.app/services/${params.id}`),
         },
         {
             path: '/myreviews',
@@ -57,7 +57,7 @@ const router  = createBrowserRouter([
         {
             path: '/update/:id',
             element: <Update></Update>,
-            loader: ({params})=> fetch(`http://localhost:5000/review/${params.id}`),
+            loader: ({params})=> fetch(`https://dental-solution-server-beta.vercel.app/review/${params.id}`),
         },
     ]
   }

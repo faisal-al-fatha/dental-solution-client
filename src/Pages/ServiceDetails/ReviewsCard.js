@@ -14,7 +14,7 @@ const ReviewsCard = ({ review, reviews, setReviews }) => {
       "Are you sure, you want to delete this review?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://dental-solution-server-beta.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

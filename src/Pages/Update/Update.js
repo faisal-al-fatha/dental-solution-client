@@ -1,8 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 const Update = () => {
     const review = useLoaderData()
     const { serviceName, ratings, message, _id } =
     review;
+    useTitle('Update')
     const handleUpdateReview = event =>{
         event.preventDefault();
         const form = event.target;
@@ -13,7 +15,7 @@ const Update = () => {
             ratings, message
         }
 
-        fetch(`http://localhost:5000/review/${_id}`, {
+        fetch(`https://dental-solution-server-beta.vercel.app/review/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

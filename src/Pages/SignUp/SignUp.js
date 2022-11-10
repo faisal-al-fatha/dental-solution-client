@@ -2,6 +2,7 @@ import { GoogleAuthProvider, updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../../src/Assets/Images/SignUp.jpg";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Layout/Main";
 
 
@@ -11,6 +12,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [error, setError]= useState('');
+    useTitle("SignUp");
 
     const from = location.state?.from?.pathname|| '/';
     const handleLogIn = (event)=>{

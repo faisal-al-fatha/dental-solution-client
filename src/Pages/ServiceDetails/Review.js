@@ -11,7 +11,7 @@ const Review = ({ service }) => {
   const [loading, setLoading]= useState(true)
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews/service?service=${_id}`)
+    fetch(`https://dental-solution-server-beta.vercel.app/reviews/service?service=${_id}`)
         .then(res => res.json())
         .then(data => {
             setReviews(data)

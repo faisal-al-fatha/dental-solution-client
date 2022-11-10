@@ -23,7 +23,7 @@ const ReviewForm = ({ service }) => {
         userImage,
         message
     }
-    fetch('http://localhost:5000/reviews', {
+    fetch('https://dental-solution-server-beta.vercel.app/reviews', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -77,7 +77,7 @@ const ReviewForm = ({ service }) => {
                 required
               ></textarea>
               <input
-                className="btn bg-cyan-500 text-black"
+                className="btn bg-cyan-500 text-black hover:bg-cyan-700 hover:text-white"
                 type="submit"
                 value="Submit your review"
               />

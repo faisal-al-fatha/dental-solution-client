@@ -1,14 +1,16 @@
 import { useContext, useEffect, useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Layout/Main";
 import ReviewsCard from "../ServiceDetails/ReviewsCard";
 
 const MyReviews = () => {
   const { user } = useContext(AuthContext);
+  useTitle('My Reviews')
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+    fetch(`https://dental-solution-server-beta.vercel.app/reviews?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

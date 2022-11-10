@@ -18,7 +18,7 @@ const AddServise = () => {
         ratings,
         details
     }
-    fetch('http://localhost:5000/services', {
+    fetch('https://dental-solution-server-beta.vercel.app/services', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

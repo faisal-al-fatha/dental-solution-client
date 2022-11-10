@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                 <div className="space-y-3">
-                    <h3 className="tracking-wide uppercase dark:text-gray-50">Product</h3>
+                    <h3 className="tracking-wide uppercase dark:text-gray-50">Services</h3>
                     <ul className="space-y-1">
                         <li>
                             <a rel="noopener noreferrer" href='/'>Features</a>
@@ -33,7 +33,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="space-y-3">
-                    <h3 className="tracking-wide uppercase dark:text-gray-50">Company</h3>
+                    <h3 className="tracking-wide uppercase dark:text-gray-50">Blogs</h3>
                     <ul className="space-y-1">
                         <li>
                             <a rel="noopener noreferrer" href='/'>Privacy</a>
@@ -44,7 +44,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="space-y-3">
-                    <h3 className="uppercase dark:text-gray-50">Developers</h3>
+                    <h3 className="uppercase dark:text-gray-50">Reviews</h3>
                     <ul className="space-y-1">
                         <li>
                             <a rel="noopener noreferrer" href='/'>Public API</a>

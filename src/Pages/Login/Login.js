@@ -2,6 +2,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../../src/Assets/Images/LogIn.jpg";
+import useTitle from "../../hooks/useTitle";
 import { AuthContext } from "../../Layout/Main";
 
 const Login = () => {
@@ -11,6 +12,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [error, setError]= useState('');
+    useTitle('Login')
 
     const from = location.state?.from?.pathname|| '/';
     const handleLogIn = (event)=>{

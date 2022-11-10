@@ -1,5 +1,7 @@
+import useTitle from "../../hooks/useTitle";
 
 const Blogs = () => {
+  useTitle('Blogs')
     return (
         <div>
       <div className="grid grid-cols-1 gap-5 my-14 lg:mx-72 md:mx-48 sm:mx-10">
@@ -80,11 +82,8 @@ It is compact, readable and digitally signed using a private key/ or a public ke
           <div className="collapse-content">
             <p>
               <span className="font-semibold">Answer:</span> NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. EventLoop is the listener for the EventQueue. 
-
-
             </p>
             <br />
-
             <p>
             If NodeJS can process the request without I/O blocking then the event loop would itself process the request and sends the response back to the client by itself. But, it is possible to process multiple requests parallelly using the NodeJS cluster module or worker_threads module.
             </p>

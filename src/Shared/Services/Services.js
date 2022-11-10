@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services/3")
+    fetch("https://dental-solution-server-beta.vercel.app/services/3")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -23,6 +24,9 @@ const Services = () => {
           <ServiceCard key={service._id} service={service}></ServiceCard>
         ))}
       </div>
+      <div className="text-center py-10">
+     <Link to='/services'> <button className="btn text-center bg-cyan-500 hover:bg-cyan-700 hover:text-white text-black">See All Services</button></Link>
+     </div>
     </div>
   );
 };
