@@ -34,7 +34,7 @@ console.log(reviews);
         <p> Total Reviews: {reviews?.length}</p>
         
         {
-            reviews.map(review=> <ReviewsCard review={review}></ReviewsCard>)
+            reviews.map(review=> <ReviewsCard review={review} reviews={reviews} setReviews={setReviews} key={review._id}></ReviewsCard>)
         }
         {user?.uid ? (
           <>

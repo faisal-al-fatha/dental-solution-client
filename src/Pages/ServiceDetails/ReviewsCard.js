@@ -4,6 +4,7 @@ import {
     faTrash
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
 const ReviewsCard = ({ review, reviews, setReviews }) => {
   const { serviceName, ratings, customer, email, userImage, message, _id } =
     review;
@@ -53,9 +54,9 @@ const ReviewsCard = ({ review, reviews, setReviews }) => {
             </div>
             <div>
               {" "}
-              <button>
+              <Link to={`/update/${_id}`}>
                 <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
-              </button>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-2 dark:text-yellow-500">
