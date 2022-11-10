@@ -44,6 +44,7 @@ const ReviewForm = ({ service }) => {
     }
     return (
         <div>
+          <h3 className='text-2xl text-center my-10'>Please submit a review of your experience on this service</h3>
             <form onSubmit={handleSubmitReview}>
               <div className="grid grid-cols-1 gap-4">
                 <input

@@ -75,7 +75,7 @@ const Nav = () => {
               {user?.uid ? (
                <>
                 <Link
-                    to="/myreviws"
+                    to="/myreviews"
                     className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
                   >
                    MY Reviews

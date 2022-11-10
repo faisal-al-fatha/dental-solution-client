@@ -1,10 +1,26 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Layout/Main";
 import ReviewForm from "./ReviewForm";
+import ReviewsCard from "./ReviewsCard";
 
 const Review = ({ service }) => {
   const { name, _id } = service;
   const { user } = useContext(AuthContext);
+  const [reviews, setReviews] = useState({});
+  const [loading, setLoading]= useState(true)
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/reviews/service?service=${_id}`)
+        .then(res => res.json())
+        .then(data => {
+            setReviews(data)
+            setLoading(false)
+        });
+}, [user?.email])
+if (loading) {
+    return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-emerald-400"></div>
+}
+console.log(reviews);
 
   
 
@@ -14,7 +30,11 @@ const Review = ({ service }) => {
         <h3 className="text-3xl text-center my-8">
           Patients Reviews of our service on {name}
         </h3>
-        {/* <ReviewsCard></ReviewsCard> */}
+        <p> Total Reviews: {reviews?.length}</p>
+        
+        {
+            reviews.map(review=> <ReviewsCard review={review}></ReviewsCard>)
+        }
         {user?.uid ? (
           <>
             <ReviewForm service={service}></ReviewForm>
