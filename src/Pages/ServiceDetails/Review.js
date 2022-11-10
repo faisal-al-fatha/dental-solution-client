@@ -10,6 +10,7 @@ const Review = ({ service }) => {
     const form = event.target;
     const reviewer = form.name.value;
     const email = user?.email;
+    const userImage = user?.photoURL;
     const ratings = form.ratings.value;
     const message = form.review.value;
   
@@ -20,9 +21,27 @@ const Review = ({ service }) => {
     ratings: ratings ,
     customer: reviewer,
     email,
+    userImage,
     message
-
 }
+fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.acknowledged){
+                    alert('Review Added')
+                    form.reset();
+                    
+                }
+            })
+            .catch(er => console.error(er));
+
 }
 
   return (
