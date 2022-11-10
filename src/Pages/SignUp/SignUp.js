@@ -56,7 +56,7 @@ const SignUp = () => {
     return (
         <div className="hero w-full my-20">
             <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
-                <div className="text-center lg:text-left">
+                <div>
                     <img className='w-full' src={img} alt="" />
                 </div>
                 <div className="w-full max-w-xl xl:px-8 mx-auto my-5">

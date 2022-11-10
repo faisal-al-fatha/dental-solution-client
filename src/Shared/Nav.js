@@ -1,8 +1,17 @@
-import { faTooth } from "@fortawesome/free-solid-svg-icons";
+import { faTooth, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Layout/Main";
 // import { logo3 } from "../Assets/Logo/logo3.svg";
 const Nav = () => {
+    const {user, logOut} = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+          .then(() => {})
+          .catch((error) => console.error(error));
+      };
   return (
     <header className="text-gray-600 body-font">
       <div className=" mx-auto flex flex-wrap p-5 ml-6 flex-col md:flex-row items-center md:justify-between">
@@ -41,7 +50,7 @@ const Nav = () => {
                 Services
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to="/login"
                 aria-label="Login"
@@ -50,7 +59,7 @@ const Nav = () => {
               >
                 LogIn
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link
@@ -62,19 +71,33 @@ const Nav = () => {
                 Blogs
               </Link>
             </li>
-            {/* <li>
+            <li>
               {user?.uid ? (
+               <>
+                <Link
+                    to="/myreviws"
+                    className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+                  >
+                   MY Reviews
+                  </Link>
+                  <Link
+                    to="/addservice"
+                    className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
+                  >
+                    Add a Service
+                  </Link>
                 <button
                   onClick={handleLogOut}
                   className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
                 >
                   Log Out
                 </button>
+               </>
               ) : (
                 <>
                   {" "}
                   <Link
-                    to="/registration"
+                    to="/signup"
                     className="font-thin tracking-wide text-gray-900 transition-colors duration-200 hover:text-cyan-700"
                   >
                     Sign Up
@@ -99,12 +122,12 @@ const Nav = () => {
                     />
                   </div>
                 ) : (
-                  <FaUser
+                    <FontAwesomeIcon icon={faUser}
                     title={user?.displayName ? user.displayName : "user"}
-                  ></FaUser>
+                    ></FontAwesomeIcon>
                 )}
               </p>
-            </li> */}
+            </li>
           </ul>
         </nav>
         </div>
