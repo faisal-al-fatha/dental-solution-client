@@ -5,7 +5,7 @@ const DetailsCard = ({ service }) => {
     console.log(_id);
     return (
       <div className="card card-compact rounded-none w-11/12 bg-base-100 shadow-xl">
-        <h3 className="text-3xl text-center my-8">Service Details of {name}</h3>
+        <h3 className="text-3xl text-center my-8 mx-6">Service Details of {name}</h3>
         <figure>
           <img className="h-96" src={image} alt="service" />
         </figure>

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import { AuthContext } from "../../Layout/Main";
 import ReviewForm from "./ReviewForm";
 import ReviewsCard from "./ReviewsCard";
@@ -27,7 +28,7 @@ console.log(reviews);
   return (
     <div>
       <div>
-        <h3 className="text-3xl text-center my-8">
+        <h3 className="text-xl text-center my-8">
           Patients Reviews of our service on {name}
         </h3>
         <p> Total Reviews: {reviews?.length}</p>
@@ -40,7 +41,7 @@ console.log(reviews);
             <ReviewForm service={service}></ReviewForm>
           </>
         ) : (
-          <h4>Please login to add a review</h4>
+          <h4 className="text-xl">Please <Link to='/login' className="btn btn-link text-xl">Login</Link> to add a review</h4>
         )}
       </div>
     </div>
